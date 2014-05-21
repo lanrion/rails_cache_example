@@ -1,3 +1,3 @@
 class Profile < ActiveRecord::Base
-  belongs_to :user, touch: true
+  belongs_to :user
 end
