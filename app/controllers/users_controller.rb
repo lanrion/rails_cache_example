@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+
+  caches_action :index, :expires_in => 30.seconds, :cache_path => proc {"users/index/#{params[:page].to_i}"}
+
   # GET /users
   # GET /users.json
   def index
@@ -9,7 +12,6 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    fresh_when :last_modified => @user.updated_at.utc, :etag => @user
   end
 
   # GET /users/new
