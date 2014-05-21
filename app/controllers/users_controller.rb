@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  after_action :expire_page_cache, only: [:create, :update]
+  caches_page :index
   # GET /users
   # GET /users.json
   def index
@@ -72,5 +74,9 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password, :comfired_at, profile_attributes: [:id, :age, :sex])
+    end
+
+    def expire_page_cache
+      expire_page action: 'index'
     end
 end

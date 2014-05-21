@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RailsCacheExample</title>
+  <link data-turbolinks-track="true" href="/assets/scaffolds.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/users.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/application.css?body=1" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/users.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="7BmqDkCXPJkRBOPghbMqDfzuqutqO2QMu6QlI2XF48w=" name="csrf-token" />
+</head>
+<body>
+
+<h1>Listing users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Comfired at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td>lanrion</td>
+        <td>huaitao-deng@foxmail.com</td>
+        <td>123</td>
+        <td></td>
+        <td><a href="/users/2">Show</a></td>
+        <td><a href="/users/2/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" data-method="delete" href="/users/2" rel="nofollow">Destroy</a></td>
+      </tr>
+      <tr>
+        <td>lanrion1</td>
+        <td>huaitao-deng@foxmail.com</td>
+        <td>123</td>
+        <td></td>
+        <td><a href="/users/3">Show</a></td>
+        <td><a href="/users/3/edit">Edit</a></td>
+        <td><a data-confirm="Are you sure?" data-method="delete" href="/users/3" rel="nofollow">Destroy</a></td>
+      </tr>
+  </tbody>
+</table>
+
+<br>
+
+<a href="/users/new">New User</a>
+
+
+</body>
+</html>
