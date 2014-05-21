@@ -1,0 +1,1 @@
+fragment_cache 一般是用record 的updated_at作cache_key，如果在关联对象上，比如cache了用户的个人主页，有user,profile两个Model的信息,cache_key为user的updated_at，如果我更新了profile，那么就理应在个人主页做相应的更新，所以直接在belongs_to :user, touch:true profile更新的时候，告诉user，也要把updated_at更新一次。另外一种方法是，把user与profie的updated_at组合做为cache_key。

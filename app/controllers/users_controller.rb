@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    fresh_when :last_modified => @user.updated_at.utc, :etag => @user
   end
 
   # GET /users/new
