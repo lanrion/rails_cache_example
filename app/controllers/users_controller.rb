@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    respond_with(@user) if stale?(@user)
   end
 
   # GET /users/new
