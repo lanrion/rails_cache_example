@@ -34,4 +34,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # config.identity_cache_store = :mem_cache_store, ActiveSupport::Cache::MemcachedStore.new(:servers => ["mem1.server.com"])
+
 end

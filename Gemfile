@@ -31,6 +31,8 @@ gem 'actionpack-page_caching'
 
 gem 'actionpack-action_caching'
 
+gem 'identity_cache'
+
 group :development, :test do
   # For debugger
   gem "pry-rails", "~> 0.3.0"
